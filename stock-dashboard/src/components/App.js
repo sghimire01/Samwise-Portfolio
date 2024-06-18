@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
-import StockData from './StockData';
-import SearchBar from './SearchBar';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import Home from './Home';
 
 function App() {
-  const [ticker, setTicker] = useState('AAPL');
-
   return (
-    <div>
-      <SearchBar onSubmit={setTicker} />
-      <StockData ticker={ticker} />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 

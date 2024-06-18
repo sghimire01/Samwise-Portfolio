@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f8;
+}
